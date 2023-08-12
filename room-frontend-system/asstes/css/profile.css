@@ -1,0 +1,21 @@
+.navbar {
+    background-color: black;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.card-bg-color {
+    background-color: #f6f6f6;
+}
+
+.card-body{
+    height: 28rem;
+}
+
+@media (max-width: 767px) {
+    .card-body{
+        height: auto;
+    }
+}
