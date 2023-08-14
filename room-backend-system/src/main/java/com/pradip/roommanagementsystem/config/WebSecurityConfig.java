@@ -30,6 +30,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class WebSecurityConfig {
     private static final String[] PUBLIC_URLS = {
             "/authenticate",
+            "/index.html",
             "/data/**",
             "/**.html",
             "/asstes/**",
@@ -57,16 +58,6 @@ public class WebSecurityConfig {
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
     }
-
-//    @Bean
-//    public Jackson2ObjectMapperBuilder jacksonBuilder() {
-//        Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder();
-//        builder.failOnUnknownProperties(false);
-//        builder.featuresToDisable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-//        builder.modules(new JavaTimeModule());
-//        builder.serializationInclusion(JsonInclude.Include.NON_NULL);
-//        return builder;
-//    }
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
